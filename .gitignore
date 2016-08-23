@@ -1,0 +1,4 @@
+#ignore modules and config
+node_modules/
+last/
+.idea/
