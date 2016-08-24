@@ -38,7 +38,8 @@ app.use('/cab', cabRouter);
 //Прослушивание и обработка ошибок
 
 //app.use(errors());
-app.listen(3000);
+var port = process.env.PORT || 3000
+app.listen(port);
 //Кееек 
 console.log('Server has started');
 
