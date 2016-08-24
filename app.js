@@ -2,7 +2,7 @@ var express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     path = require('path'),
-//    errors = require('./midd/error.js'),
+    errors = require('./midd/error.js'),
     logs = require('./midd/logger.js');
 
 
@@ -37,11 +37,12 @@ app.use('/cab', cabRouter);
 
 //Прослушивание и обработка ошибок
 
-//app.use(errors());
+
 var port = process.env.PORT || 3000;
 
 app.listen(port);
-
 console.log('Server has started');
 
+//errors middleware
+app.use(errors());
 module.exports = app;
