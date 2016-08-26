@@ -10,8 +10,8 @@ var express = require('express'),
 //Environment
 
 //require('dotenv').config();
-
-var reg = require('./models/register');
+require('dotenv/config')
+//var reg = require('./models/register');
 
 //Routes include
 
