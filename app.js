@@ -10,7 +10,7 @@ var express = require('express'),
 //Environment
 
 //require('dotenv').config();
-require('dotenv/config')
+require('dotenv/config');
 //var reg = require('./models/register');
 
 //Routes include
@@ -27,6 +27,7 @@ app.disable('x-powered-by');
 
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/pages');
+app.set('view cache');
 
 /*Middleware*/
 
