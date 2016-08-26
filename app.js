@@ -6,7 +6,12 @@ var express = require('express'),
     logs = require('./midd/logger.js');
 
 
-//Other Requires
+
+//Environment
+
+require('dotenv').config();
+
+var reg = require('./models/register');
 
 //Routes include
 
@@ -40,8 +45,10 @@ app.use('/cab', cabRouter);
 
 var port = process.env.PORT || 3000;
 
-app.listen(port);
-console.log('Server has started');
+app.listen(port, function(){
+    console.log('Server has started');
+    console.log(process.env.LOL);
+});
 
 //errors middleware
 app.use(errors());
