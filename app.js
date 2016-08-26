@@ -9,7 +9,7 @@ var express = require('express'),
 
 //Environment
 
-require('dotenv').config();
+//require('dotenv').config();
 
 var reg = require('./models/register');
 
